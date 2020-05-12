@@ -12,6 +12,12 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.brand_name{
+  text-decoration: overline;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
 img {
   max-width: 100%; }
 
