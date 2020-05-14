@@ -347,8 +347,8 @@
                         <p class="text">You let us know whenever you want us to update anything or think something can be optimised.</p>
                         <div class="call-newsletter">
                             <i class="lni-envelope"></i>
-                            <input type="text" placeholder="john@email.com">
-                            <button type="submit" onclick="location.href='mailto:gupta.kai.nikhil09@gmail.com?subject=subscribe to new letter&body=Hi There,\n I would like to subscribe daftar online news letter'">Subscribe</button><br><br><br>
+                            <input id="subscribe-email" type="text" placeholder="john@email.com">
+                            <button type="submit" onclick="subscribe()">Subscribe</button><br><br><br>
                         </div>
                     </div> 
                 </div>
@@ -483,5 +483,22 @@
     <script src="assets/js/scrolling-nav.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function subscribe(){
+            let mail = "gupta.kai.nikhil09@gmail.com";
+            let subject = "Subscribe to news letter";
+            let emailId = $("#subscribe-email").val();
+            if(emailId==""){
+                alert("please provide email id");
+                return;
+            }
+            let body = `Hi Nikhil,
+            I would like to subscribe daftar online news letter.
+            Email Id : ${emailId}
+            `;
+            location.href='mailto:'+mail+'?subject='+subject+'&body='+body;
+        }
+    </script>
 </body>
 </html>
